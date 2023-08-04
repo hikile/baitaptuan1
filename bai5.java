@@ -18,6 +18,11 @@ public class bai5 {
             kiemTra++;
         }
         System.out.println("");
+        if(kiemTra==0){
+             System.out.println(" không nấu được siro ");
+        }
+        else{
         System.out.println(" => Tổng số quả tối đa: "+kiemTra*7+" (Chanh: "+kiemTra+", Táo: "+kiemTra*2+", Lê: "+kiemTra*4+" )");
+        }
     }
 }
