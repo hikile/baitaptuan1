@@ -56,7 +56,7 @@ public class bai4 {
             //dental == 0
             else if(dental == 0){
                 // có nghiệm khác 0
-               if(x1!=0){
+               if(x1!=0 && x1>0){
                    if(b<0 && c<0){
                        System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 - "+(-c)+" = 0 có các nghiệm là: ");
                        System.out.println("x1 = "+Math.sqrt(x1));
@@ -79,7 +79,7 @@ public class bai4 {
                    }
                }
                // có nghiệm bằng 0
-               else{
+               else if(x1==0){
                    if(b<0 && c<0){
                        System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 - "+(-c)+" = 0 có các nghiệm là: ");
                        System.out.println("x = "+Math.sqrt(x1));
@@ -97,6 +97,20 @@ public class bai4 {
                        System.out.println("x = "+Math.sqrt(x1));
                    }
                }
+                else{
+                    if(b<0 && c<0){
+                       System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 - "+(-c)+" = 0 vô nghiệm");
+                    }
+                    else if(b>0 && c>0){
+                        System.out.println("=> Phương trình "+a+"x^4 + "+b+"x^2 + "+c+" = 0 vô nghiệm");
+                    }
+                    else if(b<0 && c==0){
+                        System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 "+c+" = 0 có vô số nghiệm ");
+                    }
+                    else{
+                        System.out.println("=> Phương trình "+a+"x^4 + "+b+"x^2 "+c+" = 0 có vô số nghiệm ");
+                    }
+                }
             }
             else{
                 // trường hợp không có nghiệm bằng 0
@@ -189,7 +203,7 @@ public class bai4 {
                     }
                 }
                 //trường hợp có nghiệm baằng 0
-                else if(x1 ==0 && x2!=0){
+                else if(x1 == 0 && x2>0){
                     if(b<0 && c<0){
                         System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 - "+(-c)+" = 0 có các nghiệm là: ");
                         System.out.println("x1 = "+Math.sqrt(x1));
@@ -215,7 +229,7 @@ public class bai4 {
                         System.out.println("x3 = "+(-Math.sqrt(x2)));
                     }
                 }
-                else{
+                else if(x1>0 && x2==0){
                     if(b<0 && c<0){
                         System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 - "+(-c)+" = 0 có các nghiệm là: ");
                         System.out.println("x1 = "+Math.sqrt(x1));
@@ -239,6 +253,42 @@ public class bai4 {
                         System.out.println("x1 = "+Math.sqrt(x1));
                         System.out.println("x2 = "+Math.sqrt(x2));
                         System.out.println("x3 = "+(-Math.sqrt(x1)));
+                    }
+                }
+                else if(x1==0 && x2<0){
+                    if(b<0 && c<0){
+                        System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 - "+(-c)+" = 0 có các nghiệm là: ");
+                        System.out.println("x = "+Math.sqrt(x1));
+                    }
+                    else if(b>=0 && c>=0){
+                        System.out.println("=> Phương trình "+a+"x^4 + "+b+"x^2 + "+c+" = 0 có các nghiệm là: ");
+                        System.out.println("x = "+Math.sqrt(x1));
+                    }
+                    else if(b>=0 && c<0){
+                        System.out.println("=> Phương trình "+a+"x^4 + "+b+"x^2 - "+(-c)+" = 0 có các nghiệm là: ");
+                        System.out.println("x = "+Math.sqrt(x1));
+                    }
+                    else{
+                        System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 + "+c+" = 0 có các nghiệm là: ");
+                        System.out.println("x = "+Math.sqrt(x1));
+                    }
+                }
+                else{
+                    if(b<0 && c<0){
+                        System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 - "+(-c)+" = 0 có các nghiệm là: ");
+                        System.out.println("x = "+Math.sqrt(x2));
+                    }
+                    else if(b>=0 && c>=0){
+                        System.out.println("=> Phương trình "+a+"x^4 + "+b+"x^2 + "+c+" = 0 có các nghiệm là: ");
+                        System.out.println("x = "+Math.sqrt(x2));
+                    }
+                    else if(b>=0 && c<0){
+                        System.out.println("=> Phương trình "+a+"x^4 + "+b+"x^2 - "+(-c)+" = 0 có các nghiệm là: ");
+                        System.out.println("x = "+Math.sqrt(x2));
+                    }
+                    else{
+                        System.out.println("=> Phương trình "+a+"x^4 - "+(-b)+"x^2 + "+c+" = 0 có các nghiệm là: ");
+                        System.out.println("x = "+Math.sqrt(x2));
                     }
                 }
             }
