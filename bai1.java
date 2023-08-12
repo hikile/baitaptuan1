@@ -8,15 +8,6 @@ public class bai1 {
             arr2[i]=-1;
         }
         for(int i=0 ; i<n ;i++){
-            for(int j=i+1 ; j<n ; j++){
-                if(arr1[i]>arr1[j]){
-                    int tmp=arr1[i];
-                    arr1[i]=arr1[j];
-                    arr1[j]=tmp;
-                }
-            }
-        }
-        for(int i=0 ; i<n ;i++){
             int dem=1;
             for(int j=i+1 ; j<n ;j++){
                 if(arr1[i]==arr1[j]){
