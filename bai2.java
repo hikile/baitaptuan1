@@ -6,7 +6,7 @@ public class bai2 {
   static void them(int n, int []a){
       System.out.print("nhập vị trí cần thêm: ");
       int index = sc.nextInt();
-      if(index >n || index <0){
+      if(index >n || index <=0){
           System.out.println("vị trí cần thêm không hợp lệ");
       }
       else {
@@ -27,7 +27,7 @@ public class bai2 {
     static void xoa(int n, int []a){
         System.out.print("nhập vị trí cần xóa: ");
         int index = sc.nextInt();
-        if(index >n || index <0){
+        if(index >n || index <=0){
             System.out.println("vị trí cần thêm không hợp lệ");
         }
         else {
