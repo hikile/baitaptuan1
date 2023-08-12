@@ -1,28 +1,32 @@
 import java.util.Scanner;
 
 public class bai5 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Chanh: ");
-        int chanh = scanner.nextInt();
-        System.out.print("Táo: ");
-        int tao = scanner.nextInt();
-        System.out.print("Lê: ");
-        int le = scanner.nextInt();
+   static Scanner sc= new Scanner(System.in);
 
-        int kiemTra=0;
-        while(chanh > 0 && tao > 1 && le > 3 ){
-            chanh-=1;
-            tao-=2;
-            le-=4;
-            kiemTra++;
+    public static String formatName(String name) {
+        name = name.toLowerCase();
+        String ans="";
+        boolean check= true;
+        for (int i=0 ; i<name.length() ; i++) {
+            if (name.charAt(i)==' ') {
+                check = true;
+            } else if (check && ans.length()==0) {
+                ans+=name.toUpperCase().charAt(i);
+                check = false;
+            }else if(check && ans.length()>0){
+                ans+=" "+name.toUpperCase().charAt(i);
+                check=false;
+            }
+            else {
+                ans+=name.charAt(i);
+            }
         }
-        System.out.println("");
-        if(kiemTra==0){
-             System.out.println(" không nấu được siro ");
-        }
-        else{
-        System.out.println(" => Tổng số quả tối đa: "+kiemTra*7+" (Chanh: "+kiemTra+", Táo: "+kiemTra*2+", Lê: "+kiemTra*4+" )");
-        }
+
+        return ans;
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhập vào một chuỗi tên: ");
+        String name = sc.nextLine();
+        System.out.println("Kết quả: " + formatName(name));
     }
 }

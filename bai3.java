@@ -1,27 +1,30 @@
 import java.util.Scanner;
 
 public class bai3 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n;
-        do{
-            System.out.print("Nhập số nguyên dương n: ");
-             n = new Scanner(System.in).nextInt();
-        }while(n<=0);
-
-        boolean check=true;
-        for(int i=2 ; i*i<=n ; i++){
-            if(n%i==0){
-                check=false;
-                break;
+    static Scanner sc = new Scanner(System.in);
+    static void sapXep(int n , int [] a){
+        for(int i=0 ; i<n ;i++){
+            System.out.print("a["+i+"] = ");
+            a[i]= sc.nextInt();
+        }
+        for(int i=0 ; i<n ;i++){
+            for(int j=i+1 ; j<n ; j++){
+                if(a[i]>a[j]){
+                    int tmp=a[i];
+                    a[i]=a[j];
+                    a[j]=tmp;
+                }
             }
         }
-        System.out.println("Kết quả: " );
-        if(check && n>=2){
-            System.out.println(n + " là sô nguyên tố " );
+        System.out.print("mảng sau khi sắp xếp là: ");
+        for(int i=0 ; i<n ;i++){
+            System.out.print(a[i]+" ");
         }
-        else{
-            System.out.println(n + " không phải là sô nguyên tố " );
-        }
+    }
+    public static void main(String[] args) {
+        System.out.print("nhập số lượng phần từ: ");
+        int n=sc.nextInt();
+        int [] a =new int[n];
+        sapXep(n,a);
     }
 }
